@@ -15,7 +15,7 @@ const filesToModify = [
     {
         inputPath: path.join(__dirname, '..', '..', '..', 'RobustToolbox', 'Robust.Shared', 'EntitySerialization', 'Systems', 'MapLoaderSystem.Load.cs'),
         //outputPath: path.join(__dirname, 'out', 'MapLoaderSystem.Load.cs'),
-        linesToComment: [92, 96, 97, 98, 99, 100, 101, 103, 104, 105, 106, 107, 108, 109]
+        linesToComment: [96, 97, 98, 99, 100, 101, 103, 104, 105, 106, 107, 108, 109]
     }
 ];
 
