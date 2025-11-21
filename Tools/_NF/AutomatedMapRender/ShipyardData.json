@@ -1,0 +1,1637 @@
+{
+  "Shipyard": [
+    {
+      "id": "Adder",
+      "name": "LVHI Adder",
+      "description": "A small maneuverable shuttle designed for mining. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 17000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/adder.yml",
+      "guidebookPage": "ShipyardAdder",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Ambition",
+      "name": "UAC Ambition",
+      "description": "Declassified gas production and distribution platform seized in a hostile takeover of an Atmosian conglomerate. For the ultimate insurgent.",
+      "price": 145000,
+      "category": "Large",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/ambition.yml",
+      "guidebookPage": "ShipyardAmbition",
+      "class": [
+        "Atmospherics"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Barge",
+      "name": "NC Barge",
+      "description": "A medium shipping vessel repurposed in a salvage and material exploitation vessel.",
+      "price": 52000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/barge.yml",
+      "guidebookPage": "ShipyardBarge",
+      "class": [
+        "Cargo",
+        "Salvage"
+      ],
+      "engine": [
+        "Solar",
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Baroness",
+      "name": "BB Baroness",
+      "description": "A small luxury cruiser for one or two people, with a lounge, a private bedroom, and a hell of a cockpit view.",
+      "price": 25000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/baroness.yml",
+      "guidebookPage": "ShipyardBaroness",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Bazaar",
+      "name": "SLI Bazaar",
+      "description": "The Bazaar is a personal service vessel designed to provide a platform for merchants to sell their goods, it features two locking cargo docks, a spacious cargo hold, and a mercenary post for shop security.",
+      "price": 75000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/bazaar.yml",
+      "guidebookPage": "ShipyardBazaar",
+      "class": [
+        "Cargo",
+        "Civilian"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Bocadillo",
+      "name": "NC Bocadillo",
+      "description": "A tiny food truck perfect for a solo chef. Better with a friend!",
+      "price": 25000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/bocadillo.yml",
+      "guidebookPage": "ShipyardBocadillo",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Bodkin",
+      "name": "BB Bodkin",
+      "description": "The smaller sibling to the Broadhead, the BB Bodkin is designed for rockhopping and salvage recovery.",
+      "price": 39000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/bodkin.yml",
+      "guidebookPage": "ShipyardBodkin",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Bookworm",
+      "name": "BB Bookworm",
+      "description": "A cozy medium-size library for travellers who wish to relax with a book or perhaps a board game.",
+      "price": 29000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/bookworm.yml",
+      "guidebookPage": "ShipyardBookworm",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Bulker",
+      "name": "KL Bulker",
+      "description": "A medium mining vessel designed for deep space missions",
+      "price": 47500,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/bulker.yml",
+      "guidebookPage": "ShipyardBulker",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Camper",
+      "name": "SSS Camper",
+      "description": "A personal camper shuttle for those who prefer to live in emptiness of space.",
+      "price": 12000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/camper.yml",
+      "guidebookPage": "ShipyardCamper",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Ceres",
+      "name": "BB Ceres",
+      "description": "A medium-size, high-class restaurant ship with ample seating, integrated botany and a dining room for VIP guests",
+      "price": 69500,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/ceres.yml",
+      "guidebookPage": "ShipyardCeres",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Chisel",
+      "name": "ICR Chisel",
+      "description": "Standard small-size vessel, originally meant to aid in ship scrapping, now modified to function as a multipurpose salvage/mining/cargo-hauling shuttle.",
+      "price": 32500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/chisel.yml",
+      "guidebookPage": "ShipyardChisel",
+      "class": [
+        "Salvage",
+        "Cargo"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Comet",
+      "name": "NT Comet",
+      "description": "A mining and construction vessel intended to help build or repair quickly.",
+      "price": 62000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/comet.yml",
+      "guidebookPage": "ShipyardComet",
+      "class": [
+        "Salvage",
+        "Engineering"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Copperhead",
+      "name": "LVHI Copperhead",
+      "description": "Copperhead is an affordable, versatile, small shuttle with room for customization optimized for mining and salvage missions. Whether operating within a fleet or autonomously, its design is a compromise between speed, which is important for medium- to long-distance travel, and maneuverability, which is crucial for navigating asteroid fields. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 23500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/copperhead.yml",
+      "guidebookPage": "ShipyardCopperhead",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Courier",
+      "name": "FSB Courier",
+      "description": "A compact cargo ship designed for hauling shipments.",
+      "price": 31000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/courier.yml",
+      "guidebookPage": "ShipyardCourier",
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Crescent",
+      "name": "KC Crescent",
+      "description": "The Crescent, named for its exterior shape, is a vessel focused on providing service, medical aide, and scientific breakthroughs for smaller vessels.",
+      "price": 300000,
+      "category": "Large",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/crescent.yml",
+      "guidebookPage": null,
+      "class": [
+        "Science",
+        "Chemistry",
+        "Civilian"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Crossroads",
+      "name": "PHI Crossroads",
+      "description": "A spacious and inviting service ship. The crossroads is designed to help with dock crowding, connect communities, and serve as anchors for gatherings.",
+      "price": 70000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/crossroads.yml",
+      "guidebookPage": "ShipyardCrossroads",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Garden",
+      "name": "HS Garden",
+      "description": "A small botany vessel dedicated to horiticultural experimentation.",
+      "price": 28000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/garden.yml",
+      "guidebookPage": "ShipyardGarden",
+      "class": [
+        "Botany"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Gasbender",
+      "name": "LVHI Gasbender",
+      "description": "The Gasbender is a medium-sized engineering vessel outfitted for deep space construction projects. Features atmospherics setup with mixing/ignition chamber. Designed to work in pair with smaller salvage ship. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 83000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/gasbender.yml",
+      "guidebookPage": "ShipyardGasbender",
+      "class": [
+        "Atmospherics"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "Hammer",
+      "name": "BB Hammer",
+      "description": "A mobile engineering platform for deep-space repairs, upgrades and remodelling.",
+      "price": 38000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/hammer.yml",
+      "guidebookPage": "ShipyardHammer",
+      "class": [
+        "Engineering"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Hauler",
+      "name": "NC Hauler",
+      "description": "A medium sized vessel specializing in long-haul salvage, mining, and cargo operations.",
+      "price": 69000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/hauler.yml",
+      "guidebookPage": "ShipyardHauler",
+      "class": [
+        "Cargo",
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Honker",
+      "name": "NT Honker",
+      "description": "HONK HONK HONK HONK HONK HONK",
+      "price": 22500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/honker.yml",
+      "guidebookPage": "ShipyardHonker",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Investigator",
+      "name": "NR Investigator",
+      "description": "A medium research shuttle designed for xenoarcheological studies.",
+      "price": 45000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/investigator.yml",
+      "guidebookPage": "ShipyardInvestigator",
+      "class": [
+        "Science"
+      ],
+      "engine": [
+        "Solar",
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Izakaya",
+      "name": "SSS Izakaya",
+      "description": "A medium-size, japanese-inspired restaurant/pub ship with a large dining area, and equally large kitchen.",
+      "price": 65000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/izakaya.yml",
+      "guidebookPage": "ShipyardIzakaya",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Kestrel",
+      "name": "NC Kestrel",
+      "description": "Once a local shipping lane freighter, this model has been converted for use in debris field mining and salvage operations.",
+      "price": 45000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/kestrel.yml",
+      "guidebookPage": "ShipyardKestrel",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Kilderkin",
+      "name": "LVHI Kilderkin",
+      "description": "Spaceworthy bar/microbrewery with everything one needs to facilitate poor life choices: lots of booze, smokes, and lack of food. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 47500,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/kilderkin.yml",
+      "guidebookPage": "ShipyardKilderkin",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Legman",
+      "name": "LVHI Legman",
+      "description": "A small maneuverable shuttle with low operational costs for reporters who want to be first on a scene. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 25500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/legman.yml",
+      "guidebookPage": "ShipyardLegman",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Liquidator",
+      "name": "LVHI Liquidator",
+      "description": "A small shipbreaker/salvage vessel equipped with everything a small crew need for extended work shift in deep space. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 26000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/liquidator.yml",
+      "guidebookPage": "ShipyardLiquidator",
+      "class": [
+        "Salvage",
+        "Cargo"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Loader",
+      "name": "NC Loader",
+      "description": "A compact cargo ship designed for hauling shipments.",
+      "price": 18500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/loader.yml",
+      "guidebookPage": "ShipyardLoader",
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Lyrae",
+      "name": "BB Lyrae",
+      "description": "A medium size science vessel with laboratories for both anomalous and xenoarchaeology research.",
+      "price": 60000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/lyrae.yml",
+      "guidebookPage": "ShipyardLyrae",
+      "class": [
+        "Science"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "McCargo",
+      "name": "DC McCargo",
+      "description": "Your very own McCargo™ franchise! Comes fully stocked and ready for production of McMeals.",
+      "price": 63000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/mccargo.yml",
+      "guidebookPage": "ShipyardMcCargo",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Nightlight",
+      "name": "FSB Nightlight",
+      "description": "The Far Star Biotech company's premier catering and service shuttle! Legally NOT a testbed for nutrient sequencing and biogenerative pattern research on humanoid physiology!",
+      "price": 42000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/nightlight.yml",
+      "guidebookPage": "ShipyardNightlight",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Nook",
+      "name": "WSE Nook",
+      "description": "A ship designed as a mobile home, with space for user modifications. Fast and comfortable.",
+      "price": 22000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/nook.yml",
+      "guidebookPage": "ShipyardNook",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Phoenix",
+      "name": "NR Phoenix",
+      "description": "A research and salvage vessel designed for deep space exploration.",
+      "price": 65000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/phoenix.yml",
+      "guidebookPage": "ShipyardPhoenix",
+      "class": [
+        "Science",
+        "Engineering"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Piecrust",
+      "name": "NC Piecrust",
+      "description": "A combination animal ranch and pie bakery",
+      "price": 33000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/piecrust.yml",
+      "guidebookPage": null,
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Placebo",
+      "name": "NC Placebo",
+      "description": "A small psychology vessel. Named after the famous Placebo effect.",
+      "price": 17500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/placebo.yml",
+      "guidebookPage": "ShipyardPlacebo",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Prospector",
+      "name": "NC Prospector",
+      "description": "A small mining vessel designed to assist salvage operations.",
+      "price": 21000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/prospector.yml",
+      "guidebookPage": "ShipyardProspector",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "PTS",
+      "name": "NC Personal Transport",
+      "description": "A small transport shuttle with space for 4 passengers. Comes with the latest audio entertainment technology.",
+      "price": 16000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/pts.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Pulsar",
+      "name": "FSB Pulsar",
+      "description": "The Pulsar offers two robust polar work sites built around object retrieval and research circling a command hub. With a focus on safety, know that any catastrophic failures are entirely the fault of the operator! Brought to you by the Far Star Biotech corporation.",
+      "price": 46000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/pulsar.yml",
+      "guidebookPage": "ShipyardPulsar",
+      "class": [
+        "Science"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "Retort",
+      "name": "FSB Retort",
+      "description": "A medium engineering vessel designed and deployed by the Far Star Biotech corporation to provide infrastructure support for deep space operations.",
+      "price": 59000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/retort.yml",
+      "guidebookPage": "ShipyardRetort",
+      "class": [
+        "Atmospherics"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "Skipper",
+      "name": "NC Skipper",
+      "description": "A small service ship with a full service kitchen and hydroponics garden.",
+      "price": 32500,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/skipper.yml",
+      "guidebookPage": "ShipyardSkipper",
+      "class": [
+        "Kitchen"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Spectre",
+      "name": "NR Spectre",
+      "description": "A large, attractive but dated vessel with a pure focus on research and development. It is capable of generating anomalies.",
+      "price": 111000,
+      "category": "Large",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/spectre.yml",
+      "guidebookPage": null,
+      "class": [
+        "Science"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Stellaris",
+      "name": "NT Stellaris",
+      "description": "A mobile theatre perfect for putting on any show.",
+      "price": 45500,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/stellaris.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Surveyor",
+      "name": "FSB Surveyor",
+      "description": "A budget mining and recovery shuttle for corporations unwilling to operate outside of a shoestring budget. Brought to you by the Far Star Biotech corporation!",
+      "price": 19000,
+      "category": "Small",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/surveyor.yml",
+      "guidebookPage": "ShipyardSurveyor",
+      "class": [
+        "Salvage"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Vagabond",
+      "name": "NT Vagabond",
+      "description": "A adaptable long-haul industrial freighter that pilots have adapted to many different purposes.",
+      "price": 61000,
+      "category": "Medium",
+      "group": "Shipyard",
+      "shuttlePath": "/Maps/_NF/Shuttles/vagabond.yml",
+      "guidebookPage": "ShipyardVagabond",
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    }
+  ],
+  "Medical": [
+    {
+      "id": "Akupara",
+      "name": "UW Akupara",
+      "description": "A medium full-feature botanical research biodome equipped to help a botanist fully interact with their plants in almost any way conceivable.",
+      "price": 56000,
+      "category": "Medium",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/akupara.yml",
+      "guidebookPage": "ShipyardAkupara",
+      "class": [
+        "Botany"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Apothecary",
+      "name": "FSB Apothecary",
+      "description": "A small medical and chemistry support vessel. Deployed by the Far Star Biotech company to provide aid and medical services to the Frontier.",
+      "price": 36000,
+      "category": "Small",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/apothecary.yml",
+      "guidebookPage": "ShipyardApothecary",
+      "class": [
+        "Medical",
+        "Chemistry"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Caladrius",
+      "name": "FSB Caladrius",
+      "description": "A medical carrier produced by the Far Star Biotech corporation. Designed for large scale colonization support, humanitarian relief and post-disaster investigation and recovery operations.",
+      "price": 200000,
+      "category": "Large",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/caladrius.yml",
+      "guidebookPage": "ShipyardCaladrius",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "Druid",
+      "name": "FSB Druid",
+      "description": "A medium service vessel providing botanical and chemical services to support the needs of the Frontier. Designed, developed and deployed by the Far Star Biotech company to render aid wherever it is needed.",
+      "price": 45000,
+      "category": "Medium",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/druid.yml",
+      "guidebookPage": "ShipyardDruid",
+      "class": [
+        "Botany"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Eagle",
+      "name": "NM Eagle",
+      "description": "A modern, medium-sized engineering & medical vessel. Focused on responding to shuttle distress, the Eagle comes equipped to restore most crew and shuttles to good health.",
+      "price": 62500,
+      "category": "Medium",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/eagle.yml",
+      "guidebookPage": "ShipyardEagle",
+      "class": [
+        "Medical",
+        "Engineering"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Searchlight",
+      "name": "LVHI Searchlight",
+      "description": "A small vessel outfitted for the search and recovery of wounded NT personnel. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 34500,
+      "category": "Small",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/searchlight.yml",
+      "guidebookPage": "ShipyardSearchlight",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Spirit",
+      "name": "FSB Spirit",
+      "description": "The FSB Spirit is a search and rescue shuttle for experienced Frontier medics.",
+      "price": 15000,
+      "category": "Small",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/spirit.yml",
+      "guidebookPage": "ShipyardSpirit",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Stasis",
+      "name": "FSB Stasis",
+      "description": "A medium medical vessel providing cryogenic and support medical services for the traumas of deep space operations. Designed, developed and deployed by the Far Star Biotech company to render aid wherever it is needed.",
+      "price": 56000,
+      "category": "Medium",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/stasis.yml",
+      "guidebookPage": "ShipyardStasis",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "Tyne",
+      "name": "BB Tyne",
+      "description": "A small, agile lifeboat with an exterior deck and survivor cabin for search and rescue operations.",
+      "price": 21000,
+      "category": "Small",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/tyne.yml",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Vitalis",
+      "name": "CTC Vitalis",
+      "description": "A medium medical support vessel designed for cryogenic deployment.",
+      "price": 75000,
+      "category": "Medium",
+      "group": "Medical",
+      "shuttlePath": "/Maps/_NF/Shuttles/vitalis.yml",
+      "guidebookPage": "ShipyardVitalis",
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    }
+  ],
+  "BlackMarket": [
+    {
+      "id": "Barnacle",
+      "name": "Barnacle",
+      "description": "Nobody expects the lowly barnacle",
+      "price": 20000,
+      "category": "Small",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/barnacle.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Bocakillo",
+      "name": "Bocakillo",
+      "description": "A tiny plastitanium vessel suited to a crew of 2 to 3 pirates. Has two broadside cannons and a rear-facing disposals launcher. Runs on plasma.",
+      "price": 35000,
+      "category": "Small",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/bocakillo.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Falcon",
+      "name": "Falcon",
+      "description": "Rebuilt mining vessel made into a pirate ship with hangar bay to store vehicles, fits between 3-4 crew.",
+      "price": 70000,
+      "category": "Medium",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/falcon.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Menace",
+      "name": "Menace",
+      "description": "Mail is no longer an option: you either receive it or you die.",
+      "price": 21000,
+      "category": "Small",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/menace.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Schooner",
+      "name": "Schooner",
+      "description": "A small wooden ship with 2 central cargo bays.",
+      "price": 60000,
+      "category": "Medium",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/schooner.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Turncoat",
+      "name": "Turncoat",
+      "description": "A mercenaries pride and joy, repurposed at illicit shipyards for nefarious ends. Suited to a crew of 4.",
+      "price": 85000,
+      "category": "Medium",
+      "group": "BlackMarket",
+      "shuttlePath": "/Maps/_NF/Shuttles/BlackMarket/turncoat.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pirate"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    }
+  ],
+  "Expedition": [
+    {
+      "id": "Anchor",
+      "name": "KC Anchor",
+      "description": "A large luxury cruiser capable of long ranged travel acrossed the sector, expedition capable.",
+      "price": 132000,
+      "category": "Large",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/anchor.yml",
+      "guidebookPage": null,
+      "class": [
+        "Expedition",
+        "Civilian"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Brigand",
+      "name": "LVHI Brigand",
+      "description": "Civilian conversion of an old military light frigate from the early days of humanity's expansion to the stars, predating FTL technology. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 57000,
+      "category": "Medium",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/brigand.yml",
+      "guidebookPage": "ShipyardBrigand",
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Charon",
+      "name": "EIS Charon",
+      "description": "Originally built as a roll-on, roll-off transport for heavy terraforming equipment. Since its obsolescence and appearance on the secondary market, the Charon has become a favorite of upfitters for the broad possibilities afforded by its open equipment bay. A product of Endurance Industrial Shipyards.",
+      "price": 82000,
+      "category": "Medium",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/charon.yml",
+      "guidebookPage": "ShipyardCharon",
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "DecadeDove",
+      "name": "DYS Dove",
+      "description": "Versatile expedition-capable multi-purpose light freighter.",
+      "price": 77000,
+      "category": "Medium",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/decadedove.yml",
+      "guidebookPage": null,
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Dragonfly",
+      "name": "DYS Dragonfly",
+      "description": "Highly modular salvaging vessel welded together from smaller re-purposed hulls.",
+      "price": 84000,
+      "category": "Medium",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/dragonfly.yml",
+      "guidebookPage": null,
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Pathfinder",
+      "name": "KC Pathfinder",
+      "description": "Once a scout ship serving with the Nanotrasen Marine Expeditionary Forces, this now decommissioned expedition capable ship can be yours!",
+      "price": 50000,
+      "category": "Small",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/pathfinder.yml",
+      "guidebookPage": "ShipyardPathfinder",
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Sprinter",
+      "name": "KC Sprinter",
+      "description": "A light freighter often picked by bounty hunters due to its quick acceleration, expedition capable.",
+      "price": 60000,
+      "category": "Medium",
+      "group": "Expedition",
+      "shuttlePath": "/Maps/_NF/Shuttles/Expedition/sprinter.yml",
+      "guidebookPage": null,
+      "class": [
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    }
+  ],
+  "Custom": [
+    {
+      "id": "McDelivery",
+      "name": "DC McDelivery",
+      "description": "Fast food fast ship, bring the McCargo meals to the people",
+      "price": 8750,
+      "category": "Micro",
+      "group": "Custom",
+      "shuttlePath": "/Maps/_NF/Shuttles/mcdelivery.yml",
+      "guidebookPage": "ShipyardMcDelivery",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Welding"
+      ]
+    },
+    {
+      "id": "Cleric",
+      "name": "NSF Cleric",
+      "description": "Micro support vessel used for emergency rescues and first aid.",
+      "price": 11800,
+      "category": "Micro",
+      "group": "Custom",
+      "access": "Security",
+      "mapchecker_group_override": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/cleric.yml",
+      "guidebookPage": null,
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "APU"
+      ]
+    },
+    {
+      "id": "Fighter",
+      "name": "NSF Fighter",
+      "description": "Micro attack vessel used for boarding and transport of prisoners.",
+      "price": 9000,
+      "category": "Micro",
+      "group": "Custom",
+      "access": "Security",
+      "mapchecker_group_override": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/fighter.yml",
+      "guidebookPage": null,
+      "class": [
+        "Fighter"
+      ],
+      "engine": [
+        "APU"
+      ]
+    },
+    {
+      "id": "Rogue",
+      "name": "NSF Rogue",
+      "description": "Micro assault vessel with a toggle for going dark in deep space.",
+      "price": 12200,
+      "category": "Micro",
+      "group": "Custom",
+      "access": "Security",
+      "mapchecker_group_override": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/rogue.yml",
+      "guidebookPage": null,
+      "class": [
+        "Fighter"
+      ],
+      "engine": [
+        "APU"
+      ]
+    }
+  ],
+  "Security": [
+    {
+      "id": "Broadhead",
+      "name": "NSF Broadhead",
+      "description": "A medium size detective ship with facilities for autopsies, interrogations and detailed investigations.",
+      "price": 60000,
+      "category": "Medium",
+      "group": "Security",
+      "access": "Detective",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/broadhead.yml",
+      "guidebookPage": null,
+      "class": [
+        "Detective"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Empress",
+      "name": "NSF Empress",
+      "description": "A large patrol vessel capable of carrying up to 4 smaller faster attack ships. The flagship vessel of the NFSD.",
+      "price": 170000,
+      "category": "Large",
+      "group": "Security",
+      "access": "Bailiff",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/empress.yml",
+      "guidebookPage": null,
+      "class": [
+        "Capital"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Heimdall",
+      "name": "NSF Heimdall",
+      "description": "A small detective runabout for intelligence gathering and forensic work.",
+      "price": 27000,
+      "category": "Small",
+      "group": "Security",
+      "access": "Detective",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/heimdall.yml",
+      "guidebookPage": null,
+      "class": [
+        "Detective"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Hospitaller",
+      "name": "NSF Hospitaller",
+      "description": "A small security medical craft designed for emergency response and search and rescue operations.",
+      "price": 28220,
+      "category": "Small",
+      "group": "Security",
+      "access": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/hospitaller.yml",
+      "guidebookPage": null,
+      "class": [
+        "Medical"
+      ],
+      "engine": [
+        "APU"
+      ]
+    },
+    {
+      "id": "Hypnos",
+      "name": "NSF Hypnos",
+      "description": "A light medium ship with a recommended crew of 2 to 3 officers, the Hypnos is a dedicated interdiction vessel outfitted with a powerful EMP device for tackling escaping vessels.",
+      "price": 34500,
+      "category": "Medium",
+      "group": "Security",
+      "access": "Sergeant",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/hypnos.yml",
+      "class": [
+        "Pursuit"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Paladin",
+      "name": "NSF Paladin",
+      "description": "A small security assault craft designed for space combat equipped with an EXP-2100g mounted grenade launcher.",
+      "price": 34220,
+      "category": "Small",
+      "group": "Security",
+      "access": "Security",
+      "mapchecker_group_override": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/paladin.yml",
+      "guidebookPage": null,
+      "class": [
+        "Fighter"
+      ],
+      "engine": [
+        "APU"
+      ]
+    },
+    {
+      "id": "Prowler",
+      "name": "NSF Prowler",
+      "description": "A medium-sized patrol craft, the Prowler class is a dedicated deep space pursuit vessel with an advanced sensor suite.",
+      "price": 42000,
+      "category": "Medium",
+      "group": "Security",
+      "access": "Sergeant",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/prowler.yml",
+      "guidebookPage": null,
+      "class": [
+        "Patrol"
+      ],
+      "engine": [
+        "AME"
+      ]
+    },
+    {
+      "id": "Templar",
+      "name": "NSF Templar",
+      "description": "A small security assault craft designed for combat interdiction operations.",
+      "price": 24220,
+      "category": "Small",
+      "group": "Security",
+      "access": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/templar.yml",
+      "guidebookPage": null,
+      "class": [
+        "Pursuit"
+      ],
+      "engine": [
+        "APU"
+      ]
+    },
+    {
+      "id": "Wasp",
+      "name": "NSF Wasp",
+      "description": "A large expedition oriented ship for holding prisoners and making them work planetside.",
+      "price": 135000,
+      "category": "Large",
+      "group": "Security",
+      "access": "Bailiff",
+      "shuttlePath": "/Maps/_NF/Shuttles/Nfsd/wasp.yml",
+      "guidebookPage": null,
+      "class": [
+        "Capital",
+        "Detainment",
+        "Expedition"
+      ],
+      "engine": [
+        "AME"
+      ]
+    }
+  ],
+  "Scrap": [
+    {
+      "id": "Canister",
+      "name": "UAC Canister",
+      "description": "Whatever you're bringing, it won't fit. Seats two. Gravity included.",
+      "price": 8000,
+      "category": "Micro",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/canister.yml",
+      "guidebookPage": null,
+      "class": [
+        "Scrapyard",
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Construct",
+      "name": "NT Construct",
+      "description": "A technically spacefaring vessel.  No livery.",
+      "price": 10500,
+      "category": "Micro",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/construct.yml",
+      "guidebookPage": "ShipyardConstruct",
+      "class": [
+        "Scrapyard",
+        "Engineering"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Disciple",
+      "name": "NSV Disciple",
+      "description": "A cheaply made amalgamation of religious ships. For the seasoned religious assistant.",
+      "price": 15000,
+      "category": "Small",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/disciple.yml",
+      "guidebookPage": null,
+      "class": [
+        "Scrapyard",
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Geode",
+      "name": "CLU Geode",
+      "description": "Built into a rock by the finest goblin engineers, this vessel has all the discrete trader needs to conduct business.",
+      "price": 51000,
+      "category": "Medium",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/geode.yml",
+      "guidebookPage": "ShipyardGeode",
+      "class": [
+        "Scrapyard",
+        "Civilian",
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Nugget",
+      "name": "SV Nugget",
+      "description": "A flying hunk of wood and metal disguised as a kitchen shuttle. Not FDA approved.",
+      "price": 15950,
+      "category": "Small",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/nugget.yml",
+      "guidebookPage": null,
+      "class": [
+        "Scrapyard",
+        "Kitchen"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Orange",
+      "name": "SV Orange",
+      "description": "A cargo slash salvage shuttle made from scavenged wrecks, comes with some damage.",
+      "price": 18000,
+      "category": "Small",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/orange.yml",
+      "guidebookPage": null,
+      "class": [
+        "Scrapyard",
+        "Cargo",
+        "Salvage"
+      ],
+      "engine": [
+        "Uranium"
+      ]
+    },
+    {
+      "id": "Tide",
+      "name": "SV Tide",
+      "description": "A cheaply made mass-produced shuttle made from salvaged wrecks. For the seasoned assistant.",
+      "price": 9700,
+      "category": "Small",
+      "group": "Scrap",
+      "shuttlePath": "/Maps/_NF/Shuttles/Scrap/tide.yml",
+      "guidebookPage": "ShipyardTide",
+      "class": [
+        "Scrapyard",
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    }
+  ],
+  "Sr": [
+    {
+      "id": "Broom",
+      "name": "LVHI Broom",
+      "description": "A cramped yet reliable shuttle for providing janitorial services.",
+      "price": 12000,
+      "category": "Micro",
+      "group": "Sr",
+      "access": "Janitor",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/broom.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Chauffeur",
+      "name": "NC Chauffeur",
+      "description": "A small transport shuttle with space for 4 passengers. Comes with the latest audio entertainment technology.",
+      "price": 16000,
+      "category": "Small",
+      "group": "Sr",
+      "access": "Service",
+      "shuttlePath": "/Maps/_NF/Shuttles/pts.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Duchess",
+      "name": "NT Duchess",
+      "description": "A mobile office and personal transport for the Station Representative, based on the BB Bodkin.",
+      "price": 25000,
+      "category": "Small",
+      "group": "Sr",
+      "access": "HeadOfPersonnel",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/duchess.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Express",
+      "name": "FSB Express",
+      "description": "A small endurance shuttle for express logistics support in Frontier space.",
+      "price": 16500,
+      "category": "Small",
+      "group": "Sr",
+      "access": "Mail",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/express.yml",
+      "guidebookPage": null,
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma",
+        "Solar"
+      ]
+    },
+    {
+      "id": "Harbormaster",
+      "name": "LVHI Harbormaster",
+      "description": "A small tugboat. Manufactured by Langstad-Voigt Heavy Industries.",
+      "price": 27000,
+      "category": "Small",
+      "group": "Sr",
+      "access": "StationTrafficController",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/harbormaster.yml",
+      "guidebookPage": "ShipyardHarbormaster",
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Bananium"
+      ]
+    },
+    {
+      "id": "MailPod",
+      "name": "NC Mail Pod",
+      "description": "A cramped yet reliable shuttle for delivering packages.",
+      "price": 12000,
+      "category": "Micro",
+      "group": "Sr",
+      "access": "Mail",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/mailpod.yml",
+      "guidebookPage": null,
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Parcel",
+      "name": "NC Parcel",
+      "description": "A reliable shuttle for delivering mail and packages.",
+      "price": 16000,
+      "category": "Small",
+      "group": "Sr",
+      "access": "Mail",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/parcel.yml",
+      "guidebookPage": null,
+      "class": [
+        "Cargo"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Watchdog",
+      "name": "SBI Watchdog",
+      "description": "A refurbished and repainted older model of the NSF Templar for use for Mercenaries and 'repurposed' for the Station Guard, mind the gap.",
+      "price": 20000,
+      "category": "Small",
+      "group": "Sr",
+      "access": "Brig",
+      "mapchecker_group_override": "Security",
+      "shuttlePath": "/Maps/_NF/Shuttles/Sr/watchdog.yml",
+      "guidebookPage": null,
+      "class": [
+        "Civilian"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    }
+  ],
+  "Syndicate": [
+    {
+      "id": "Hunter",
+      "name": "Hunter",
+      "description": "A small armored Syndicate assault shuttle, perfect for devious operations!",
+      "price": 50000,
+      "category": "Small",
+      "group": "Syndicate",
+      "shuttlePath": "/Maps/_NF/Shuttles/Syndicate/hunter.yml",
+      "guidebookPage": null,
+      "class": [
+        "Syndicate"
+      ],
+      "engine": [
+        "Plasma"
+      ]
+    },
+    {
+      "id": "Infiltrator",
+      "name": "Infiltrator",
+      "description": "A Syndicate nuclear operative infiltration ship.",
+      "price": 85000,
+      "category": "Medium",
+      "group": "Syndicate",
+      "shuttlePath": "/Maps/_NF/Shuttles/Syndicate/infiltrator.yml",
+      "guidebookPage": null,
+      "class": [
+        "Syndicate"
+      ],
+      "engine": [
+        "AME"
+      ]
+    }
+  ]
+}
