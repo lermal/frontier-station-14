@@ -5,7 +5,7 @@ const path = require("path");
 const ShowContainerLogs = true; // Set to false to hide container logs
 const ShipyardPath = path.join(__dirname, "..", "..", "..", "Resources", "Prototypes", "_NF", "Shipyard"); // Path to the shuttle files
 const ShipRootPath = path.join(__dirname, "..", "..", "..", "Resources", "Maps", "_NF", "Shuttles"); // Path to the shuttle files
-let MaxInstances = 2; // Maximum number of instances to run in parallel
+let MaxInstances = 1; // Maximum number of instances to run in parallel
 
 // !! Do not edit below this line if you don't know what you're doing !!
 // Developer Settings;
