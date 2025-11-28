@@ -15,7 +15,7 @@ const POISources = [
         renderPath: "Maps/_NF/Outpost",
     },
 ];
-let MaxInstances = 2; // Maximum number of instances to run in parallel
+let MaxInstances = 1; // Maximum number of instances to run in parallel
 
 // !! Do not edit below this line if you don't know what you're doing !!
 // Developer Settings;
