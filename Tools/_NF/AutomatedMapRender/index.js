@@ -201,7 +201,6 @@ async function init() {
                     );
                 return;
             }
-            console.log(AllShuttleToRender);
             let NextShipyardPath = AllShuttleToRender.shift();
             let ShuttleToRender = NextShipyardPath.split("/").pop();
             let ShuttleName = ShuttleToRender.split(".")[0];
@@ -426,10 +425,7 @@ function AddExecLogs(exec, prefix = null, shuttle = null) {
     exec.on("close", (code) => {
         const color = "gray";
         console.log(chalk[color](`${prefix ? `${prefix} ` : ""}child process exited with code ${code}`));
-        if (code !== 0 && shuttle && !FailedShuttles.includes(shuttle)) {
-            FailedShuttles.push(shuttle);
-        }
-        if (!FailedShuttles.includes(shuttle) && shuttle && code === 0) {
+        if (!FailedShuttles.includes(shuttle) && shuttle) {
             SucceedShuttles.push(shuttle);
             RenameMappedFile(shuttle);
             delete Logs[shuttle];
@@ -455,12 +451,7 @@ function RenameMappedFile(shuttle) {
         if (fs.existsSync(ShuttleFile)) {
             fs.renameSync(ShuttleFile, ShuttleFileNew);
         } else {
-            if (!fs.existsSync(ShipyardPath)) {
-                console.log(
-                    Tags.error + chalk.red(`Output directory does not exist for ${ShuttleName}: ${ShipyardPath}`)
-                );
-                return;
-            }
+            // Scan the folder for the rendered file and rename it to the correct name
             const files = fs.readdirSync(ShipyardPath);
             const fileToRename = files.find((file) => file.startsWith(ShuttleName) && file.endsWith(".png"));
             if (fileToRename) {
