@@ -240,7 +240,7 @@ async function init() {
             );
             const mapPath = `Maps/_NF/Shuttles/${ShuttleToRender}`;
             const outputDir = fs.existsSync(WEB_RENDERS_DIR) ? WEB_RENDERS_DIR : path.join(__dirname, "ShuttleRenders");
-            const Command = `cd ${Root} && dotnet run --project Content.MapRenderer --files ${mapPath} --output ${outputDir}`;
+            const Command = `cd ${Root} && dotnet run --project Content.MapRenderer --files /Resources/${mapPath} --output ${outputDir}`;
             ShuttleToRender = ShuttleName.split(".")[0]; // Оставляем только имя для дальнейшего использования
             if (Debug)
                 console.log(
