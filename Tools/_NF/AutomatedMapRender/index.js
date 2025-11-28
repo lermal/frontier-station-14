@@ -356,42 +356,45 @@ function RenameMappedFile(shuttle) {
 
     const ShuttleName = shuttle.split(".")[0];
     const ShuttleNameLower = ShuttleName.toLowerCase();
-    let ShipyardPath = path.join(baseRenderDir, ShuttleName);
-    let ShuttleFile = path.join(ShipyardPath, `${ShuttleName}-0.png`);
+    let ShuttleFile = null;
+    let ShipyardPath = null;
 
-    if (!fs.existsSync(ShuttleFile)) {
-        ShipyardPath = path.join(
-            baseRenderDir,
-            ShuttleName.replace(/^./, (str) => str.toUpperCase())
-        );
-        ShuttleFile = path.join(ShipyardPath, `${ShuttleName.replace(/^./, (str) => str.toUpperCase())}-0.png`);
+    if (!fs.existsSync(baseRenderDir)) {
+        console.log(Tags.error + chalk.red(`Base render directory not found: ${baseRenderDir}`));
+        return;
+    }
 
-        if (!fs.existsSync(ShuttleFile)) {
-            if (fs.existsSync(ShipyardPath)) {
-                const files = fs.readdirSync(ShipyardPath);
-                const fileToRename = files.find((file) => file.includes(ShuttleName) && file.endsWith(".png"));
-                if (fileToRename) {
-                    ShuttleFile = path.join(ShipyardPath, fileToRename);
-                } else {
-                    console.log(Tags.error + chalk.red(`Failed to find the rendered file for ${ShuttleName}`));
-                    return;
-                }
-            } else {
-                console.log(Tags.error + chalk.red(`Render directory not found: ${ShipyardPath}`));
-                return;
-            }
+    const dirs = fs.readdirSync(baseRenderDir, { withFileTypes: true });
+    for (const dir of dirs) {
+        if (!dir.isDirectory()) continue;
+
+        const dirName = dir.name;
+        const dirPath = path.join(baseRenderDir, dirName);
+
+        if (dirName.toLowerCase() !== ShuttleNameLower) continue;
+
+        const files = fs.readdirSync(dirPath);
+        const pngFile = files.find((file) => file.endsWith(".png") && file.toLowerCase().includes(ShuttleNameLower));
+
+        if (pngFile) {
+            ShipyardPath = dirPath;
+            ShuttleFile = path.join(dirPath, pngFile);
+            break;
         }
     }
 
-    if (fs.existsSync(ShuttleFile)) {
-        const targetFile = path.join(baseRenderDir, `${ShuttleNameLower}.png`);
-        try {
-            fs.copyFileSync(ShuttleFile, targetFile);
-            fs.rmSync(ShipyardPath, { recursive: true, force: true });
-            console.log(Tags.info + chalk.green(`Moved and renamed file: ${targetFile}`));
-        } catch (error) {
-            console.log(Tags.error + chalk.red(`Failed to move file: ${error.message}`));
-        }
+    if (!ShuttleFile || !fs.existsSync(ShuttleFile)) {
+        console.log(Tags.error + chalk.red(`Failed to find the rendered file for ${ShuttleName}`));
+        return;
+    }
+
+    const targetFile = path.join(baseRenderDir, `${ShuttleNameLower}.png`);
+    try {
+        fs.copyFileSync(ShuttleFile, targetFile);
+        fs.rmSync(ShipyardPath, { recursive: true, force: true });
+        console.log(Tags.info + chalk.green(`Moved and renamed file: ${targetFile}`));
+    } catch (error) {
+        console.log(Tags.error + chalk.red(`Failed to move file: ${error.message}`));
     }
 }
 
