@@ -3,8 +3,18 @@ const path = require("path");
 // Script Made by Myzumi
 // Edit Variables here
 const ShowContainerLogs = true; // Set to false to hide container logs
-const ShipyardPath = path.join(__dirname, "..", "..", "..", "Resources", "Prototypes", "_NF", "Shipyard"); // Path to the shuttle files
-const ShipRootPath = path.join(__dirname, "..", "..", "..", "Resources", "Maps", "_NF", "Shuttles"); // Path to the shuttle files
+const POISources = [
+    {
+        prototypePath: path.join(__dirname, "..", "..", "..", "Resources", "Prototypes", "_NF", "PointsOfInterest"),
+        mapPath: path.join(__dirname, "..", "..", "..", "Resources", "Maps", "_NF", "POI"),
+        renderPath: "Maps/_NF/POI",
+    },
+    {
+        prototypePath: path.join(__dirname, "..", "..", "..", "Resources", "Prototypes", "_NF", "Maps", "Outpost"),
+        mapPath: path.join(__dirname, "..", "..", "..", "Resources", "Maps", "_NF", "Outpost"),
+        renderPath: "Maps/_NF/Outpost",
+    },
+];
 let MaxInstances = 1; // Maximum number of instances to run in parallel
 
 // !! Do not edit below this line if you don't know what you're doing !!
@@ -21,11 +31,12 @@ const Root = path.join(__dirname, "..", "..", "..");
 const Logs = {};
 let LockQueueClear = false;
 const ShuttlePaths = {};
+const POISourceMap = {};
 
 // Пути для сохранения данных
 const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.webcodewizard.ru";
-const WEB_SHUTTLES_JSON = path.join(WEB_SITE_ROOT, "storage", "app", "data", "pages", "shuttles.json");
-const WEB_RENDERS_DIR = path.join(WEB_SITE_ROOT, "storage", "app", "public", "renders", "shuttles");
+const WEB_SHUTTLES_JSON = path.join(WEB_SITE_ROOT, "storage", "app", "data", "pages", "poi.json");
+const WEB_RENDERS_DIR = path.join(WEB_SITE_ROOT, "storage", "app", "public", "renders", "poi");
 
 let DevFilter = []; // This should not be used. Only for testing purposes.
 
@@ -104,54 +115,71 @@ function CleanUps() {
     }
 }
 async function init() {
-    let ShipyardTypes = await FindShuttleFiles(ShipyardPath);
     const AllShuttleToRender = [];
     const ShuttlesData = {
-        renders_path: "renders/shuttles/",
+        renders_path: "renders/poi/",
         categories: {},
     };
 
-    ShipyardTypes.forEach((file) => {
-        if (String(file).toLowerCase().includes("base")) return;
-        let fileName = String(file).split("/").pop().toLowerCase();
-        if (DevFilter.length !== 0 && !DevFilter.includes(String(fileName.replace(".yml", "")))) {
-            if (Debug) console.log(Tags.debug + chalk.cyan(`Ignoring Shipyard File: ${file}`));
-            return;
-        }
-        if (Debug) console.log(Tags.debug + chalk.cyan(`Found Shipyard File: ${file}`));
-        const filePath = path.join(ShipyardPath, file);
-        const fileContent = fs.readFileSync(filePath, "utf8");
-        const yamlData = YAML.parse(fileContent, { logLevel: "error" });
-        if (!yamlData[0] || !yamlData[0].group) return;
+    for (const source of POISources) {
+        let ShipyardTypes = await FindShuttleFiles(source.prototypePath);
 
-        const vesselData = yamlData[0];
-        const shuttleId = vesselData.id;
-        const shuttleIdLower = shuttleId.toLowerCase();
-        const group = vesselData.group || "Unknown";
+        ShipyardTypes.forEach((file) => {
+            if (String(file).toLowerCase().includes("base")) return;
+            let fileName = String(file).split("/").pop().toLowerCase();
+            if (DevFilter.length !== 0 && !DevFilter.includes(String(fileName.replace(".yml", "")))) {
+                if (Debug) console.log(Tags.debug + chalk.cyan(`Ignoring POI File: ${file}`));
+                return;
+            }
+            if (Debug) console.log(Tags.debug + chalk.cyan(`Found POI File: ${file}`));
+            const filePath = path.join(source.prototypePath, file);
+            const fileContent = fs.readFileSync(filePath, "utf8");
+            const yamlData = YAML.parse(fileContent, { logLevel: "error" });
 
-        const shuttleItem = {
-            id: shuttleId,
-            name: vesselData.name || shuttleId,
-            image: `${shuttleIdLower}.png`,
-            price: vesselData.price || 0,
-            description: vesselData.description || "",
-            category: vesselData.category || "Small",
-            class: vesselData.class || [],
-            engines: vesselData.engine || [],
-        };
+            let vesselData = null;
+            if (yamlData[0] && yamlData[0].type === "pointOfInterest") {
+                vesselData = yamlData[0];
+            } else if (yamlData[0] && yamlData[0].type === "gameMap") {
+                vesselData = yamlData[0];
+            } else if (yamlData[0] && yamlData[0].id) {
+                vesselData = yamlData[0];
+            }
 
-        if (!ShuttlesData.categories[group]) {
-            ShuttlesData.categories[group] = [];
-        }
-        ShuttlesData.categories[group].push(shuttleItem);
-        AllShuttleToRender.push(file);
-        const relativePath = path.relative(__dirname, path.join(ShipRootPath, file)).replace(/\\/g, "/");
-        ShuttlePaths[file.toLowerCase()] = relativePath;
-        ShuttlePaths[fileName] = relativePath;
-    });
+            if (!vesselData || !vesselData.id) return;
+
+            const shuttleId = vesselData.id;
+            const shuttleIdLower = shuttleId.toLowerCase();
+            const group = vesselData.group || vesselData.spawnGroup || "Unknown";
+
+            const shuttleItem = {
+                id: shuttleId,
+                name: vesselData.name || vesselData.mapName || shuttleId,
+                image: `${shuttleIdLower}.png`,
+                price: vesselData.price || 0,
+                description: vesselData.description || "",
+                category: vesselData.category || "Small",
+                class: vesselData.class || [],
+                engines: vesselData.engine || [],
+            };
+
+            if (!ShuttlesData.categories[group]) {
+                ShuttlesData.categories[group] = [];
+            }
+            ShuttlesData.categories[group].push(shuttleItem);
+
+            const renderKey = `${source.renderPath}/${file}`;
+            AllShuttleToRender.push(renderKey);
+            POISourceMap[renderKey.toLowerCase()] = source;
+            POISourceMap[file.toLowerCase()] = source;
+
+            const relativePath = path.relative(__dirname, path.join(source.mapPath, file)).replace(/\\/g, "/");
+            ShuttlePaths[renderKey.toLowerCase()] = relativePath;
+            ShuttlePaths[file.toLowerCase()] = relativePath;
+        });
+    }
 
     if (AllShuttleToRender.length === 0) {
-        console.log(Tags.error + chalk.red(`No Shuttles were found inside ${ShipyardPath}, exiting...`));
+        console.log(Tags.error + chalk.red(`No POI files were found, exiting...`));
         return process.exit(1);
     }
 
@@ -163,7 +191,7 @@ async function init() {
         const serverDir = path.dirname(WEB_SHUTTLES_JSON);
         fs.mkdirSync(serverDir, { recursive: true });
         fs.writeFileSync(WEB_SHUTTLES_JSON, JSON.stringify(ShuttlesData, null, 4), "utf8");
-        console.log(Tags.info + chalk.green(`shuttles.json saved: ${WEB_SHUTTLES_JSON}`));
+        console.log(Tags.info + chalk.green(`poi.json saved: ${WEB_SHUTTLES_JSON}`));
     } catch (error) {
         console.log(Tags.error + chalk.red(`Failed to save shuttles.json: ${error.message}`));
     }
@@ -231,8 +259,13 @@ async function init() {
                 return;
             }
             let NextShipyardPath = AllShuttleToRender.shift();
-            let ShuttleToRender = NextShipyardPath; // Используем полный путь вместо только имени файла
-            let ShuttleName = NextShipyardPath.split("/").pop(); // Имя файла для отображения
+            let ShuttleToRender = NextShipyardPath;
+            let ShuttleName = NextShipyardPath.split("/").pop();
+            const source =
+                POISourceMap[NextShipyardPath.toLowerCase()] ||
+                POISourceMap[ShuttleName.toLowerCase()] ||
+                POISources[0];
+
             console.log(
                 chalk.blue(
                     `Starting MapRenderer for ${ShuttleName.split(".")[0]}, Taking ${PrettyPrintNumber(
@@ -242,10 +275,10 @@ async function init() {
                     } left to render`
                 )
             );
-            const mapPath = `Maps/_NF/Shuttles/${ShuttleToRender}`;
+            const mapPath = `${source.renderPath}/${ShuttleName}`;
             const outputDir = fs.existsSync(WEB_RENDERS_DIR) ? WEB_RENDERS_DIR : path.join(__dirname, "ShuttleRenders");
             const Command = `cd ${Root} && dotnet run --project Content.MapRenderer --files Resources/${mapPath} --output ${outputDir}`;
-            ShuttleToRender = ShuttleName.split(".")[0]; // Оставляем только имя для дальнейшего использования
+            ShuttleToRender = ShuttleName.split(".")[0];
             if (Debug)
                 console.log(
                     Tags.debug + chalk.cyan(`[${CurrentInstances + 1}-Render] Running ChildExec Command: ${Command}`)
@@ -279,12 +312,13 @@ async function init() {
                             chalk.yellow(`child process failed, shuttle: ${ShuttleToRender}. Launching Fixing process`)
                     );
                     LockQueueClear = true;
-                    let response = FixMappingFile(NextShipyardPath);
+                    let response = FixMappingFile(NextShipyardPath, source);
                     if (response) {
                         FailedShuttles = FailedShuttles.filter((shuttle) => shuttle !== response);
                         EditedShuttles.push(response);
-                        // Восстанавливаем полный путь для повторного рендеринга
-                        let fullPath = NextShipyardPath.includes("/") ? NextShipyardPath : response + ".yml";
+                        let fullPath = NextShipyardPath.includes("/")
+                            ? NextShipyardPath
+                            : `${source.renderPath}/${response}.yml`;
                         AllShuttleToRender.push(fullPath);
                         LockQueueClear = false;
                     }
@@ -402,10 +436,9 @@ function RenameMappedFile(shuttle) {
     }
 }
 
-function FixMappingFile(shuttle) {
-    const originalShuttle = shuttle; // Сохраняем оригинальный путь
-    const shuttleFileName = shuttle.split("/").pop(); // Получаем только имя файла
-    // Попробуем найти путь по полному пути или по имени файла
+function FixMappingFile(shuttle, source) {
+    const originalShuttle = shuttle;
+    const shuttleFileName = shuttle.split("/").pop();
     let RelativePath = ShuttlePaths[shuttle.toLowerCase()] || ShuttlePaths[shuttleFileName.toLowerCase()];
 
     if (!RelativePath) {
