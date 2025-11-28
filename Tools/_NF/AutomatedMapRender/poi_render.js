@@ -33,6 +33,8 @@ let LockQueueClear = false;
 const ShuttlePaths = {};
 const POISourceMap = {};
 const POIMapPaths = {};
+const POIPrototypeToMap = {};
+const POIPrototypeToId = {};
 
 // Пути для сохранения данных
 const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.webcodewizard.ru";
@@ -192,11 +194,16 @@ async function init() {
             ShuttlesData.categories[group].push(shuttleItem);
 
             const renderKey = `${source.renderPath}/${file}`;
+            const prototypeName = file.split(".")[0].toLowerCase();
+            const mapName = actualMapFile.split(".")[0].toLowerCase();
+
             AllShuttleToRender.push(renderKey);
             POISourceMap[renderKey.toLowerCase()] = source;
             POISourceMap[file.toLowerCase()] = source;
             POIMapPaths[renderKey.toLowerCase()] = actualMapFile;
             POIMapPaths[file.toLowerCase()] = actualMapFile;
+            POIPrototypeToMap[prototypeName] = mapName;
+            POIPrototypeToId[prototypeName] = shuttleIdLower;
 
             const relativePath = path.relative(__dirname, path.join(source.mapPath, actualMapFile)).replace(/\\/g, "/");
             ShuttlePaths[renderKey.toLowerCase()] = relativePath;
@@ -422,6 +429,7 @@ function RenameMappedFile(shuttle) {
 
     const ShuttleName = shuttle.split(".")[0];
     const ShuttleNameLower = ShuttleName.toLowerCase();
+    const MapNameLower = POIPrototypeToMap[ShuttleNameLower] || ShuttleNameLower;
     let ShuttleFile = null;
     let ShipyardPath = null;
 
@@ -437,10 +445,10 @@ function RenameMappedFile(shuttle) {
         const dirName = dir.name;
         const dirPath = path.join(baseRenderDir, dirName);
 
-        if (dirName.toLowerCase() !== ShuttleNameLower) continue;
+        if (dirName.toLowerCase() !== MapNameLower) continue;
 
         const files = fs.readdirSync(dirPath);
-        const pngFile = files.find((file) => file.endsWith(".png") && file.toLowerCase().includes(ShuttleNameLower));
+        const pngFile = files.find((file) => file.endsWith(".png") && file.toLowerCase().includes(MapNameLower));
 
         if (pngFile) {
             ShipyardPath = dirPath;
@@ -450,11 +458,15 @@ function RenameMappedFile(shuttle) {
     }
 
     if (!ShuttleFile || !fs.existsSync(ShuttleFile)) {
-        console.log(Tags.error + chalk.red(`Failed to find the rendered file for ${ShuttleName}`));
+        console.log(
+            Tags.error +
+                chalk.red(`Failed to find the rendered file for ${ShuttleName} (looking for map: ${MapNameLower})`)
+        );
         return;
     }
 
-    const targetFile = path.join(baseRenderDir, `${ShuttleNameLower}.png`);
+    const targetId = POIPrototypeToId[ShuttleNameLower] || ShuttleNameLower;
+    const targetFile = path.join(baseRenderDir, `${targetId}.png`);
     try {
         fs.copyFileSync(ShuttleFile, targetFile);
         fs.rmSync(ShipyardPath, { recursive: true, force: true });
