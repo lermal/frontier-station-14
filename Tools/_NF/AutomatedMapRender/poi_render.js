@@ -32,6 +32,7 @@ const Logs = {};
 let LockQueueClear = false;
 const ShuttlePaths = {};
 const POISourceMap = {};
+const POIMapPaths = {};
 
 // Пути для сохранения данных
 const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.webcodewizard.ru";
@@ -137,12 +138,18 @@ async function init() {
             const yamlData = YAML.parse(fileContent, { logLevel: "error" });
 
             let vesselData = null;
-            if (yamlData[0] && yamlData[0].type === "pointOfInterest") {
-                vesselData = yamlData[0];
-            } else if (yamlData[0] && yamlData[0].type === "gameMap") {
-                vesselData = yamlData[0];
-            } else if (yamlData[0] && yamlData[0].id) {
-                vesselData = yamlData[0];
+            let mapFilePath = null;
+
+            for (const item of yamlData) {
+                if (item.type === "pointOfInterest" && item.gridPath) {
+                    mapFilePath = item.gridPath;
+                    if (!vesselData) vesselData = item;
+                } else if (item.type === "gameMap" && item.mapPath) {
+                    if (!mapFilePath) mapFilePath = item.mapPath;
+                    if (!vesselData) vesselData = item;
+                } else if (item.id && !vesselData) {
+                    vesselData = item;
+                }
             }
 
             if (!vesselData || !vesselData.id) return;
@@ -150,6 +157,23 @@ async function init() {
             const shuttleId = vesselData.id;
             const shuttleIdLower = shuttleId.toLowerCase();
             const group = vesselData.group || vesselData.spawnGroup || "Unknown";
+
+            let actualMapFile = file;
+            if (mapFilePath) {
+                let mapPathNormalized = mapFilePath.trim();
+                if (mapPathNormalized.startsWith("/")) {
+                    mapPathNormalized = mapPathNormalized.substring(1);
+                }
+                if (mapPathNormalized.startsWith("Maps/")) {
+                    mapPathNormalized = mapPathNormalized.substring(5);
+                }
+                actualMapFile = mapPathNormalized.split("/").pop();
+                if (Debug) {
+                    console.log(
+                        Tags.debug + chalk.cyan(`Found map path for ${file}: ${mapFilePath} -> ${actualMapFile}`)
+                    );
+                }
+            }
 
             const shuttleItem = {
                 id: shuttleId,
@@ -171,8 +195,10 @@ async function init() {
             AllShuttleToRender.push(renderKey);
             POISourceMap[renderKey.toLowerCase()] = source;
             POISourceMap[file.toLowerCase()] = source;
+            POIMapPaths[renderKey.toLowerCase()] = actualMapFile;
+            POIMapPaths[file.toLowerCase()] = actualMapFile;
 
-            const relativePath = path.relative(__dirname, path.join(source.mapPath, file)).replace(/\\/g, "/");
+            const relativePath = path.relative(__dirname, path.join(source.mapPath, actualMapFile)).replace(/\\/g, "/");
             ShuttlePaths[renderKey.toLowerCase()] = relativePath;
             ShuttlePaths[file.toLowerCase()] = relativePath;
         });
@@ -265,6 +291,8 @@ async function init() {
                 POISourceMap[NextShipyardPath.toLowerCase()] ||
                 POISourceMap[ShuttleName.toLowerCase()] ||
                 POISources[0];
+            const actualMapFile =
+                POIMapPaths[NextShipyardPath.toLowerCase()] || POIMapPaths[ShuttleName.toLowerCase()] || ShuttleName;
 
             console.log(
                 chalk.blue(
@@ -275,7 +303,7 @@ async function init() {
                     } left to render`
                 )
             );
-            const mapPath = `${source.renderPath}/${ShuttleName}`;
+            const mapPath = `${source.renderPath}/${actualMapFile}`;
             const outputDir = fs.existsSync(WEB_RENDERS_DIR) ? WEB_RENDERS_DIR : path.join(__dirname, "ShuttleRenders");
             const Command = `cd ${Root} && dotnet run --project Content.MapRenderer --files Resources/${mapPath} --output ${outputDir}`;
             ShuttleToRender = ShuttleName.split(".")[0];
