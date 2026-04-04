@@ -23,7 +23,7 @@ let LockQueueClear = false;
 const ShuttlePaths = {};
 
 // Пути для сохранения данных
-const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.webcodewizard.ru";
+const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.frontierstation14.com";
 const WEB_SHUTTLES_JSON = path.join(WEB_SITE_ROOT, "storage", "app", "data", "pages", "shuttles.json");
 const WEB_RENDERS_DIR = path.join(WEB_SITE_ROOT, "storage", "app", "public", "renders", "shuttles");
 
@@ -122,12 +122,14 @@ async function init() {
         const filePath = path.join(ShipyardPath, file);
         const fileContent = fs.readFileSync(filePath, "utf8");
         const yamlData = YAML.parse(fileContent, { logLevel: "error" });
-        if (!yamlData[0] || !yamlData[0].group) return;
+        if (!yamlData[0] || yamlData[0].type !== "vessel") return;
 
         const vesselData = yamlData[0];
         const shuttleId = vesselData.id;
         const shuttleIdLower = shuttleId.toLowerCase();
-        const group = vesselData.group || "Unknown";
+        const posixDir = path.posix.dirname(String(file).replace(/\\/g, "/"));
+        const folderGroup = posixDir !== "." ? posixDir.split("/").pop() : null;
+        const group = vesselData.group || folderGroup || "Unknown";
 
         const shuttleItem = {
             id: shuttleId,

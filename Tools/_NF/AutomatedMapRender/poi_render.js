@@ -37,7 +37,7 @@ const POIPrototypeToMap = {};
 const POIPrototypeToId = {};
 
 // Пути для сохранения данных
-const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.webcodewizard.ru";
+const WEB_SITE_ROOT = "/var/www/shipyard_web_usr/data/www/shipyard.frontierstation14.com";
 const WEB_SHUTTLES_JSON = path.join(WEB_SITE_ROOT, "storage", "app", "data", "pages", "poi.json");
 const WEB_RENDERS_DIR = path.join(WEB_SITE_ROOT, "storage", "app", "public", "renders", "poi");
 
