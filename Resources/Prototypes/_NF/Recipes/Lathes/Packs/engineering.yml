@@ -80,6 +80,16 @@
   - PortableGeneratorDKJrMachineCircuitboard
 
 - type: latheRecipePack
+  id: NFEngineeringBoardsCircuitImprinter
+  recipes:
+  - GasMiningDrillMachineCircuitboard
+  - GaslockFrameMachineCircuitboard
+  - AlertsComputerCircuitboard
+  - PowerComputerCircuitboard
+  - AtmosMonitoringComputerCircuitboard
+  - SolarAssemblyFlatpack
+
+- type: latheRecipePack
   id: NFEngineering
   recipes:
   - ShipyardRCD

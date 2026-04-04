@@ -154,11 +154,11 @@
   components:
   - type: Mail
     contents:
-    - id: ClothingOuterWizard
-    - id: ClothingHeadHatWizard
+    - id: ClothingOuterFakeWizard
+    - id: ClothingHeadHatFakeWizard
     - id: ClothingShoesWizard
     - id: RubberStampWizard
-    - id: WizardStaffMeleeBase
+    - id: FakeWizardStaff
       orGroup: Staff
       prob: 0.6
     - id: PonderingOrb
@@ -1241,6 +1241,16 @@
   - type: Mail
     contents:
     - id: WeaponVulpCannon
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseMailLarge
+  id: MailNFPlushieCannon
+  suffix: plushie cannon
+  components:
+  - type: Mail
+    contents:
+    - id: WeaponPlushieCannon
 
 - type: entity
   categories: [ HideSpawnMenu ]

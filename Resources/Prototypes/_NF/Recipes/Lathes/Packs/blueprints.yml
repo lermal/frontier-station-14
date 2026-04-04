@@ -23,6 +23,7 @@
   # AudioVisualCommunication
   - TelecomServerCircuitboard
   - NFHolopadShipMachineCircuitboard
+  - NFHolopadGridMachineCircuitboard
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
@@ -35,6 +36,8 @@
   # RoboticCleanliness
   - BorgModuleAdvancedCleaning
   - PortablePumpMachineCircuitBoard
+  # IndustrialCutter
+  - CutterMachineCircuitboard
   # FauxAstroTiles
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
@@ -77,7 +80,9 @@
   - PortableGeneratorJrPacmanMachineCircuitboard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - SolarAssemblyFlatpack
   - EmitterCircuitboard
+  - PowerComputerCircuitboard
   # AtmosphericTech
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
@@ -103,6 +108,8 @@
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
   - HolofanProjector
+  - AlertsComputerCircuitboard
+  - AtmosMonitoringComputerCircuitboard
   # AdvancedToolsTechnology
   - WelderExperimental
   - PowerDrill
@@ -146,6 +153,7 @@
   - CryostasisBeaker
   - SyringeCryostasis
   # MechanizedTreatment
+  - BorgModuleAdvancedChemical
   - BorgModuleAdvancedParamedic
   # RoboticCleanliness
   - PortablePumpMachineCircuitBoard
@@ -219,6 +227,7 @@
   - JetpackSecurity
   # AdvancedPersonalPropulsion
   - JetpackVoid
+  - NFClothingShoesBootsJetpack
   # HardsuitsExperimentalIndustrial
   - ClothingOuterHardsuitMaximPrototype
 
@@ -256,6 +265,7 @@
   - JetpackCaptain
   # AdvancedPersonalPropulsion
   - JetpackVoid
+  - NFClothingShoesBootsJetpack
   # BluespaceGasTanks
   - BluespaceAirTank
   - SmallBluespaceAirTank
@@ -356,6 +366,8 @@
   # MeatManipulation
   - FatExtractorMachineCircuitboard
   - BiogeneratorMachineCircuitboard
+  # IndustrialCutter
+  - CutterMachineCircuitboard
   # FauxAstroTiles
   - FauxTileAstroGrass
   - FauxTileMowedAstroGrass
