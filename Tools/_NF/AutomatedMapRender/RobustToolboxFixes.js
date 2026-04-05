@@ -20,7 +20,24 @@ const filesToModify = [
             "MapLoaderSystem.Load.cs"
         ),
         //outputPath: path.join(__dirname, 'out', 'MapLoaderSystem.Load.cs'),
-        linesToComment: [103, 104, 105, 106, 107, 108, 109],
+        linesToComment: [
+            103, 104, 105, 106, 107, 108, 109,
+            125, 126, 127, 128, 129, 130, 131, 132, 133, 134,
+            149, 150, 151, 152, 153, 154, 155,
+        ],
+    },
+    {
+        inputPath: path.join(
+            __dirname,
+            "..",
+            "..",
+            "..",
+            "RobustToolbox",
+            "Robust.Shared",
+            "EntitySerialization",
+            "EntityDeserializer.cs"
+        ),
+        linesToComment: [889, 890],
     },
 ];
 
