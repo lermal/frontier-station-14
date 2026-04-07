@@ -1,0 +1,21 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # каждые 6 часов
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync-Fork-action
+        uses: XueMoMo/Sync-Fork-action@v1.0.6
+        with:
+          upstream_repository: new-frontiers-14/frontier-station-14
+          upstream_branch: master
+          target_branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
