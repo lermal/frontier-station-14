@@ -9467,3 +9467,24 @@ Entries:
   id: 6789
   time: '2026-07-15T17:54:29.0000000+00:00'
   url: https://github.com/new-frontiers-14/frontier-station-14/pull/4606
+- author: zalindae
+  changes:
+    - type: Add
+      message: Hamsters can now be put on your head
+  id: 6790
+  time: '2026-07-15T18:58:11.0000000+00:00'
+  url: https://github.com/new-frontiers-14/frontier-station-14/pull/4700
+- author: SemperVictor
+  changes:
+    - type: Tweak
+      message: 'Added new markdown tags to all paperwork forms for convenience. '
+  id: 6791
+  time: '2026-07-15T22:46:43.0000000+00:00'
+  url: https://github.com/new-frontiers-14/frontier-station-14/pull/4667
+- author: Minemoder
+  changes:
+    - type: Tweak
+      message: The Streetpunk accent no longer replaces "left" with "delta'd"
+  id: 6792
+  time: '2026-07-16T00:02:24.0000000+00:00'
+  url: https://github.com/new-frontiers-14/frontier-station-14/pull/4671
